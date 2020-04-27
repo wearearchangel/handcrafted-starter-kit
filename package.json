@@ -4,10 +4,10 @@
   "description": "The Archangel's in-house software development framework",
   "private": true,
   "dependencies": {
-    "@wearearchangel/handcrafted": "0.0.x"
+    "@wearearchangel/handcrafted": "0.0.4"
   },
   "devDependencies": {
-    "sass": "^1.26.3",
+    "sass": "^1.26.5",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
