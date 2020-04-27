@@ -1,0 +1,38 @@
+{
+  "name": "handcrafted-starter-kit",
+  "version": "0.0.1",
+  "description": "The Archangel's in-house software development framework",
+  "private": true,
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^13.4.0",
+    "@contentful/rich-text-links": "^14.0.0",
+    "@contentful/rich-text-plain-text-renderer": "^14.0.0",
+    "@contentful/rich-text-types": "^14.1.0",
+    "@wearearchangel/handcrafted": "^0.0.x",
+    "contentful": "^7.14.2",
+    "handlebars": "^4.7.6"
+  },
+  "devDependencies": {
+    "sass": "^1.26.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "deploy": "webpack --mode=production",
+    "start:dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wearearchangel/handcrafted-starter-kit.git"
+  },
+  "author": "Michael Mwaura",
+  "license": "ISC",
+  "homepage": "https://github.com/wearearchangel/handcrafted-starter-kit#readme",
+  "bugs": {
+    "url": "https://github.com/wearearchangel/handcrafted-starter-kit/issues"
+  }
+}

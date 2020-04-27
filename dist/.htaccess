@@ -1,0 +1,19 @@
+Options +FollowSymLinks
+Options -Indexes
+
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^/?(.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+	RewriteEngine On
+	RewriteBase /
+	RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+	RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+	RewriteRule ^ - [L]
+	RewriteRule ^ /index.html
+</ifModule>
+
+<IfModule !mod_rewrite.c>
+	ErrorDocument 404 /index.html
+</IfModule>
