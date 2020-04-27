@@ -4,13 +4,7 @@
   "description": "The Archangel's in-house software development framework",
   "private": true,
   "dependencies": {
-    "@contentful/rich-text-html-renderer": "^13.4.0",
-    "@contentful/rich-text-links": "^14.0.0",
-    "@contentful/rich-text-plain-text-renderer": "^14.0.0",
-    "@contentful/rich-text-types": "^14.1.0",
-    "@wearearchangel/handcrafted": "^0.0.x",
-    "contentful": "^7.14.2",
-    "handlebars": "^4.7.6"
+    "@wearearchangel/handcrafted": "0.0.x"
   },
   "devDependencies": {
     "sass": "^1.26.3",
