@@ -4,7 +4,7 @@
   "description": "The Archangel's in-house software development framework",
   "private": true,
   "dependencies": {
-    "@wearearchangel/handcrafted": "0.0.4"
+    "@wearearchangel/handcrafted": "0.0.5"
   },
   "devDependencies": {
     "sass": "^1.26.5",
