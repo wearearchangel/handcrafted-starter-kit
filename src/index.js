@@ -14,8 +14,6 @@ import hcf from '@wearearchangel/handcrafted';
 // import $ from 'jquery';
 // import 'slick-carousel';
 
-console.log(hcf);
-
 (function () {
 	'use strict';
 	
@@ -68,34 +66,36 @@ console.log(hcf);
 	
 	// TODO: Step 6 - Define your views
 	hcf.views({
-		/* A view will respond to any of these formats: */
-		'home': '/',
-		'view-name-1': 'String: url to appear on the url bar',
+		/*!
+		 * A view will take at least one of these, at most all:
+		 * A template is automatically fetched from ./static/templates but if you'd like to
+		 * you can define it yourself. Note, a template and a templateUrl cannot be used together,
+		 * the templateUrl will always take over.
+		 * */
+		'view-name-1': '/', // String: url to appear on the url bar
 		'view-name-2': {
-			path: 'String: url to appear on the url bar',
-			title: 'String: SEO friendly name to appear as the document title',
+			path: '/view-name-2', // String: url to appear on the url bar
+			title: 'View Name 2', // String: SEO friendly name to appear as the document title
 		},
 		'view-name-3': {
-			path: 'String: url to appear on the url bar',
-			title: 'String: SEO friendly name to appear as the document title',
-			data: {
-				// 'Data to be consumed in the template'
-			},
+			path: '/view-name-3', // String: url to appear on the url bar
+			template: "Thanks for downloading Handcrafted Framework.", // Template is loaded from ./static/templates but can be added in the script as text
 		},
 		'view-name-4': {
-			path: 'String: url to appear on the url bar',
-			title: 'String: SEO friendly name to appear as the document title',
-			data: () => {
-				return {
-					// 'Data to be consumed in the template'
-				}
-			},
+			path: '/view-name-4', // String: url to appear on the url bar
+			templateUrl: "view-name-1.tpl.html", // Template is loaded from ./static/templates but can be added in the script as a file from the templates folder
 		},
 		'view-name-5': {
-			path: 'String: url to appear on the url bar',
-			title: 'String: SEO friendly name to appear as the document title',
-			data: 'Object of Function that returns an object: Data to be consumed in the template',
-			controller: /* View specific controllers are not ready for use */ 'Function: Code to be executed once only this view has loaded'
+			path: '/view-name-5', // String: url to appear on the url bar
+			data: {
+				"handcrafted": true
+			}, // 'Data can be consumed in the template as an object'
+		},
+		'view-name-6': {
+			path: '/view-name-6', // String: url to appear on the url bar
+			data: () => ({
+				"handcrafted": true
+			}), // 'Data can be consumed in the template as a function'
 		}
 	}, 'selected', null, () => {
 		// TODO: Step 7 - Write the code you'd like executed on all views
