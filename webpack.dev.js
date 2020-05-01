@@ -5,9 +5,9 @@ module.exports = merge(common, {
 	mode: 'development',
 	devtool: 'source-map',
 	devServer: {
-		publicPath: './static/scripts/',
-		contentBase: './dist',
+		publicPath: '/static/scripts/',
+		contentBase: 'dist/',
 		watchContentBase: true,
-		compress: true
+		compress: true,
 	}
 });

@@ -1,6 +1,6 @@
 {
   "name": "handcrafted-starter-kit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The Archangel's in-house software development framework",
   "private": true,
   "dependencies": {
