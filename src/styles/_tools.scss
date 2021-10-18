@@ -1,0 +1,140 @@
+@use "sass:math";
+
+/*
+ * Links
+ */
+%link {
+	font-weight: 500;
+	position: relative;
+	
+	&[href=""] {
+		cursor: default;
+		opacity: .5;
+	}
+	
+	&:not([href=""]) {
+		&:after {
+			content: '';
+			position: absolute;
+			background: currentColor;
+			width: 100%;
+			height: 0;
+			bottom: -1px;
+			left: 0;
+			transition: height 125ms ease-out;
+		}
+	}
+	
+	
+	&:hover {
+		&:not([href=""]) {
+			text-decoration: underline;
+		}
+	}
+	
+	&.selected {
+		font-weight: bold;
+		
+		&:hover {
+			text-decoration: none;
+		}
+		
+		&:after {
+			height: 2px;
+			transition: height 125ms ease-out;
+		}
+	}
+}
+
+/*
+ * Buttons
+ */
+%resetButton {
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+}
+
+/*
+ * Images
+ */
+%imagePlaceholder {
+	position: relative;
+	
+	.img,
+	.vid,
+	.map {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	
+	.img[src=""],
+	.img[src="N/A"],
+	.vid[src=""] {
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			background-position: center center;
+			background-repeat: no-repeat;
+			opacity: .54;
+		}
+	}
+}
+
+@mixin imgPlaceholder($imgWidth, $imgHeight) {
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	padding-top: math.div($imgHeight, $imgWidth) * 100%;
+	@extend %imagePlaceholder;
+}
+
+/*
+ Breakpoints
+ */
+@mixin breakpoint($point) {
+	@if $point==hd {
+		@media (min-width: 90em) {
+			@content ;
+		}
+	} @else if $point==desktop {
+		@media (min-width: 70em) {
+			@content ;
+		}
+	} @else if $point==laptop {
+		@media (min-width: 64.1em) {
+			@content ;
+		}
+	} @else if $point==laptoponly {
+		@media (max-width: 64em) {
+			@content ;
+		}
+	} @else if $point==tablet {
+		@media (min-width: 50.1em) {
+			@content ;
+		}
+	} @else if $point==tabletonly {
+		@media (max-width: 50em) {
+			@content ;
+		}
+	} @else if $point==phablet {
+		@media (min-width: 37.6em) {
+			@content ;
+		}
+	} @else if $point==mobileonly {
+		@media (max-width: 37.5em) {
+			@content ;
+		}
+	}
+}

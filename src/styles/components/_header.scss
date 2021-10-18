@@ -1,0 +1,18 @@
+.header {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--grid);
+	
+	.logo {
+	}
+	
+	.nav--items {
+		.nav--item {
+			&:not(:last-of-type) {
+				margin-right: calc(var(--grid) / 2);
+			}
+		}
+	}
+}

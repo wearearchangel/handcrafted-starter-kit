@@ -1,0 +1,31 @@
+//@import "../tools";
+
+.logo {
+	@extend %resetButton;
+	
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	text-align: left;
+	
+	.img {
+		width: 30px;
+		height: 30px;
+	}
+	
+	.title {
+		flex: 1;
+		display: flex;
+		flex-flow: column;
+		padding-left: calc(var(--grid) / 3);
+		
+		span {
+			white-space: nowrap;
+		}
+	}
+	
+	.title__name {
+		font-weight: 700;
+		margin-bottom: 2px;
+	}
+}

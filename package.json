@@ -1,35 +1,29 @@
 {
-  "name": "handcrafted-starter-kit",
-  "version": "0.0.4",
-  "description": "The Archangel's in-house software development framework",
-  "private": true,
-  "dependencies": {
-    "@wearearchangel/handcrafted": "^0.0.6"
-  },
-  "devDependencies": {
-    "sass": "^1.26.5",
-    "terser-webpack-plugin": "^2.3.6",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
-    "webpack-merge": "^4.2.2"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.dev.js",
-    "deploy": "webpack --config webpack.prod.js && sass src/styles/main.scss dist/static/styles/main.css --style=compressed",
-    "watch:scripts": "webpack --config webpack.dev.js --watch",
-    "watch:styles": "sass --watch src/styles/main.scss dist/static/styles/main.css",
-    "start:dev": "webpack-dev-server --open --config webpack.dev.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wearearchangel/handcrafted-starter-kit.git"
-  },
-  "author": "Michael Mwaura",
-  "license": "ISC",
-  "homepage": "https://github.com/wearearchangel/handcrafted-starter-kit#readme",
-  "bugs": {
-    "url": "https://github.com/wearearchangel/handcrafted-starter-kit/issues"
-  }
+	"name": "handcrafted-starter-kit",
+	"version": "1.0.0",
+	"private": true,
+	"repository": "https://github.com/wearearchangel/handcrafted-starter-kit.git",
+	"author": "Michael Mwaura",
+	"license": "ISC",
+	"dependencies": {
+		"@wearearchangel/handcrafted": "^1.0.0-alpha.3"
+	},
+	"devDependencies": {
+		"html-webpack-plugin": "^5.4.0",
+		"sass": "^1.43.2",
+		"sass-loader": "^12.2.0",
+		"terser-webpack-plugin": "^5.2.4",
+		"webpack": "^5.0.0",
+		"webpack-cli": "^4.7.0",
+		"webpack-dev-server": "^4.0.0"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack",
+		"start:dev": "webpack serve --mode=development",
+		"stage": "webpack --mode=staging",
+		"deploy:js": "webpack --mode=production",
+		"deploy:css": "sass src/styles/main.scss dist/static/styles/main.css --style compressed",
+		"deploy": "npm build && npm deploy:css"
+	}
 }
