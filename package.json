@@ -1,8 +1,8 @@
 {
-	"name": "mariapolis-piero",
+	"name": "handcrafted-starter-kit",
 	"version": "1.0.0",
 	"private": true,
-	"repository": "https://github.com/wearearchangel/mariapolis-piero.git",
+	"repository": "https://github.com/wearearchangel/handcrafted-starter-kit.git",
 	"author": "Michael Mwaura",
 	"license": "ISC",
 	"dependencies": {
