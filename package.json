@@ -24,6 +24,6 @@
 		"stage": "webpack --mode=staging",
 		"deploy:js": "webpack --mode=production",
 		"deploy:css": "sass src/styles/main.scss dist/static/styles/main.css --style compressed",
-		"deploy": "npm build && npm deploy:css"
+		"deploy": "npm run deploy:js && npm run deploy:css"
 	}
 }
