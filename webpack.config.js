@@ -16,6 +16,7 @@ const devServer = {
 
 const config = {
 	default: {
+		mode: 'none',
 		entry: [
 			'./src/scripts/main.js',
 			'./src/styles/main.scss'
