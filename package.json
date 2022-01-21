@@ -20,7 +20,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "webpack",
-		"start:dev": "webpack serve --mode=development",
+		"start": "webpack serve --mode=development",
 		"stage": "webpack --mode=staging",
 		"deploy:js": "webpack --mode=production",
 		"deploy:css": "sass src/styles/main.scss dist/static/styles/main.css --style compressed",
