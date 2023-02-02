@@ -1,11 +1,9 @@
-import hcf from '@wearearchangel/handcrafted';
+import { Router } from '@wearearchangel/handcrafted'
 
-(function (appName) {
-	'use strict';
-	
-	hcf.views({
-		'home': '/'
-	}, 'selected', null, () => {
-		// Code you'd like executed on all views
-	});
-})({});
+import Home from './pages/Home'
+
+Router({
+  home: Home,
+  page: '/foo',
+  'sub-page': '/foo/:bar'
+})
