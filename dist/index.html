@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<base href="/">
 		<meta charset="utf-8">
-		<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-		<meta name="description" content="Life is an adventure"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+		
 		<meta name="msapplication-tap-highlight" content="no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="description" content="Web site created using the Handcrafted Starter Kit"/>
+		<meta name="keywords" content="Handcrafted, Starter, Kit"/>
 		
 		<link rel="canonical" href=""/>
 		<link rel="manifest" href="manifest.json"/>
+		<link rel="shortcut icon" href="favicon.ico"/>
 		<link rel="stylesheet" href="static/styles/main.css"/>
+		
+		<script defer src="static/scripts/main.js" type="text/javascript"></script>
 		
 		<title>Handcrafted Starter Kit</title>
 	</head>
 	
-	<body class="wrapper">
-		<header class="header">
-			<button class="logo">
-				<svg class="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect width="5" height="5"/><polygon points="15 0 15 15 5 15 5 25 0 25 0 10 10 10 10 0 15 0"/><rect x="10" y="20" width="5" height="5"/></g></g></svg>
-				<span class="title">
-					<span class="title__name">Handcrafted</span>
-					<span>Starter Kit</span>
-				</span>
-				<span class="srt">Handcrafted Starter Kit</span>
-			</button>
+	<body>
+		<noscript>You need to enable JavaScript to view this site.</noscript>
+		<div class="wrapper">
+			<header class="header">
+				<div class="logo">
+					<svg class="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect width="5" height="5"/><polygon points="15 0 15 15 5 15 5 25 0 25 0 10 10 10 10 0 15 0"/><rect x="10" y="20" width="5" height="5"/></g></g></svg>
+					<span class="title">
+						<span class="title__name">Handcrafted</span>
+						<span>Starter Kit</span>
+					</span>
+					<span class="srt">Handcrafted Starter Kit</span>
+				</div>
+				
+				<nav class="nav--items nav__main">
+					<a data-route="/" class="nav--item">Home</a>
+					<a data-route="/foo" class="nav--item">Page</a>
+					<a data-route="/foo/bar" class="nav--item">Subpage</a>
+				</nav>
+			</header>
 			
-			<nav class="nav--items nav__main">
-				<a role="menuitem" data-route="home" class="nav--item">Home</a>
-			</nav>
-		</header>
-		
-		<main class="page"></main>
-		
-		<footer class="footer">
-			<div class="footer--copy">&copy; 2020 Handcrafted Starter Kit. All Rights Reserved</div>
-			<div class="footer--signature">
-				<a href="//wearearchangel.com">Handcrafted in Kenya</a>
-			</div>
-		</footer>
-		
-		<script defer src="static/scripts/main.js" type="text/javascript"></script>
+			<main class="page"></main>
+			
+			<footer class="footer">
+				<div class="footer--copy">&copy; <script>document.write(`${new Date().getFullYear()}`)</script> Handcrafted Starter Kit. All Rights Reserved</div>
+				<div class="footer--signature">
+					<a href="//wearearchangel.com">Handcrafted in Kenya</a>
+				</div>
+			</footer>
+		</div>
 	</body>
 </html>

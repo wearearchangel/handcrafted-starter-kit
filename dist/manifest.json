@@ -1,9 +1,10 @@
 {
+  "short_name": "Handcrafted SKIT",
   "name": "Handcrafted Starter Kit",
-  "description": "The Archangel's in-house software development framework",
+  "description": "Official Starter Kit for Handcrafted.js",
   "icons": [
     {
-      "src": "static/images/manifest/icon.png",
+      "src": "static/assets/manifest/icon.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
@@ -11,14 +12,14 @@
   ],
   "screenshots": [
     {
-      "src": "static/images/manifest/screenshot.jpg",
+      "src": "static/assets/manifest/screenshot.jpg",
       "sizes": "640x480",
       "type": "image/jpeg"
     }
   ],
   "scope": "/",
-  "start_url": "/",
+  "start_url": ".",
+  "display": "minimal-ui",
   "theme_color": "#98521A",
-  "background_color": "#4B2609",
-  "display": "minimal-ui"
+  "background_color": "#4B2609"
 }
