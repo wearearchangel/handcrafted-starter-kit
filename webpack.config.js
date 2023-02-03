@@ -115,7 +115,9 @@ const config = {
   }
 }
 
-module.exports = (env, argv) => ({
-  ...configDefault,
-  ...config[`${argv.mode}`]
-})
+module.exports = (env, argv) => {
+  return ({
+    ...configDefault,
+    ...config[argv.mode || 'production']
+  })
+}
