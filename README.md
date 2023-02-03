@@ -1,12 +1,11 @@
-The handcrafted starter kit.
+# The Handcrafted Starter Kit.
 
-**Contents of this starter kit**
-1. Handcrafted Framework (HCF)
-2. Google PWA Specs
-3. Netlify Ready Site
-4. HTTPS by default
+## Tech Stack
+* Target: Webpack
+* Technologies: ES6 + Sass + Webpack + NodeJS +  Npm
+* Features:  ES6 + Handcrafted + Sass (BEM + ITCSS)
 
-
-## Setting Up
-1. Run `npm run build` 
-2. Run `npm run start:dev`
+## Usage
+1. Run `npm install` 
+2. Run `npm run build` 
+3. Run `npm run start:dev`
