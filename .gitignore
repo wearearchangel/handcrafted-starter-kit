@@ -111,7 +111,7 @@ typings/
 
 # production
 build
-dist/static/
+dist
 
 # misc
 .DS_Store

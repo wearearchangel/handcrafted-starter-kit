@@ -5,6 +5,7 @@ const TerserPlugin = require('terser-webpack-plugin')
 const WorkboxPlugin = require('workbox-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const devServer = {
   static: {
@@ -22,7 +23,11 @@ const plugins = [
   }),
   new CopyPlugin({
     patterns: [
-      'assets/manifest/**/*'
+      'assets/manifest/**/*',
+      '.htaccess',
+      'favicon.ico',
+      'manifest.json',
+      'robots.txt'
     ],
     options: {
       concurrency: 100
@@ -31,6 +36,10 @@ const plugins = [
   new MiniCssExtractPlugin({
     filename: 'styles/[name].css',
     chunkFilename: 'styles/[id].css'
+  }),
+  new HtmlWebpackPlugin({
+    filename: 'index.html',
+    template: './index.html'
   })
 ]
 
@@ -54,7 +63,6 @@ const configDefault = {
       },
       {
         test: /\.(sa|sc|c)ss$/i,
-        type: 'asset/resource',
         use: [
           process.env.NODE_ENV === 'development'
             ? 'style-loader'
@@ -74,9 +82,8 @@ const configDefault = {
     ]
   },
   output: {
-    clean: true,
     filename: 'scripts/[name].js',
-    path: path.resolve(__dirname, 'dist/static')
+    path: path.resolve(__dirname, 'dist')
   },
   target: 'web'
 }
@@ -97,7 +104,8 @@ const config = {
       minimize: true,
       minimizer: [new TerserPlugin({})],
       usedExports: true
-    }
+    },
+    plugins: plugins.concat([])
   },
   production: {
     mode: 'production',
