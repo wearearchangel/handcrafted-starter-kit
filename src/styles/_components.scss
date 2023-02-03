@@ -1,0 +1,31 @@
+.header {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--grid);
+	
+	.nav__item {
+		&:not(:last-of-type) {
+			margin-right: calc(var(--grid) / 2);
+		}
+	}
+}
+
+.page {
+	flex: 1;
+	padding: var(--grid);
+}
+
+.footer {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding: var(--grid);
+	
+	.footer__copy {
+	}
+	
+	.footer__signature {
+	}
+}

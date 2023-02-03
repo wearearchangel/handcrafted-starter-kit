@@ -20,14 +20,12 @@
 	--theme-background: #FFF;
 }
 
+/*
+ CSS architecture: https://itcss.io
+ CSS code methodology: https://en.bem.info/
+ */
 @import "tools";
 @import "generic";
 @import "base";
-
-@import "objects/nav";
-@import "objects/logo";
-@import "objects/layout";
-
-@import "components/header";
-@import "components/page";
-@import "components/footer";
+@import "objects";
+@import "components";

@@ -23,24 +23,36 @@
 		<div class="wrapper">
 			<header class="header">
 				<div class="logo">
-					<svg class="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 25"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect width="5" height="5"/><polygon points="15 0 15 15 5 15 5 25 0 25 0 10 10 10 10 0 15 0"/><rect x="10" y="20" width="5" height="5"/></g></g></svg>
-					<span class="title">
-						<span class="title__name">Handcrafted</span>
-						<span>Starter Kit</span>
-					</span>
-					<span class="srt">Handcrafted Starter Kit</span>
+					<div class="logo__img">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 25">
+							<g id="Layer_2" data-name="Layer 2">
+								<g id="Layer_1-2" data-name="Layer 1">
+									<rect width="5" height="5"/>
+									<polygon points="15 0 15 15 5 15 5 25 0 25 0 10 10 10 10 0 15 0"/>
+									<rect x="10" y="20" width="5" height="5"/>
+								</g>
+							</g>
+						</svg>
+					</div>
+					<div class="logo__text">
+						<div class="name">Handcrafted</div>
+						<div class="tagline">Starter Kit</div>
+					</div>
 				</div>
 				
-				<nav class="nav--items nav__main">
-					<a data-route="/" class="nav--item">Home</a>
+				<nav class="nav">
+					<a class="nav__item" data-route="/">Home</a>
 				</nav>
 			</header>
 			
 			<main class="page"></main>
 			
 			<footer class="footer">
-				<div class="footer--copy">&copy; <script>document.write(`${new Date().getFullYear()}`)</script> Handcrafted Starter Kit. All Rights Reserved</div>
-				<div class="footer--signature">
+				<div class="footer__copy">
+					&copy; <script>document.write(`${new Date().getFullYear()}`)</script>
+					Handcrafted Starter Kit. All Rights Reserved
+				</div>
+				<div class="footer__signature">
 					<a href="//wearearchangel.com">Handcrafted in Kenya</a>
 				</div>
 			</footer>
