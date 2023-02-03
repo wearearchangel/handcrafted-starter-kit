@@ -23,8 +23,8 @@ const plugins = [
   }),
   new CopyPlugin({
     patterns: [
-      'assets/manifest/**/*',
       '.htaccess',
+      'manifest/**/*',
       'favicon.ico',
       'manifest.json',
       'robots.txt'
@@ -54,7 +54,7 @@ const configDefault = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
-        generator: { filename: 'assets/[name][ext]' }
+        generator: { filename: 'fonts/[name][ext]' }
       },
       {
         test: /\.(png|svg|jpe?g|webp|gif|ico)$/i,
