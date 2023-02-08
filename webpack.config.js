@@ -7,16 +7,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const devServer = {
-  static: {
-    directory: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
-    serveIndex: true
-  },
-  historyApiFallback: true,
-  compress: true
-}
-
 const plugins = [
   new webpack.DefinePlugin({
     'process.env': JSON.stringify(process.env)
@@ -92,7 +82,16 @@ const config = {
   development: {
     mode: 'development',
     devtool: 'source-map',
-    devServer,
+    devServer: {
+      open: true,
+      static: {
+        directory: path.resolve(__dirname, 'dist'),
+        publicPath: '/',
+        serveIndex: true
+      },
+      historyApiFallback: true,
+      compress: true
+    },
     optimization: {},
     plugins: plugins.concat([])
   },
