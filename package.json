@@ -3,11 +3,11 @@
 	"version": "1.2.0",
 	"private": true,
 	"dependencies": {
-		"@wearearchangel/handcrafted": "^1.0.0-beta-rc-8.1",
-		"html-webpack-plugin": "^5.5.0",
-		"rimraf": "^4.1.2"
+		"@wearearchangel/handcrafted": "^1.0.0-beta-rc-8.1"
 	},
 	"devDependencies": {
+		"rimraf": "^4.1.2",
+		"html-webpack-plugin": "^5.5.0",
 		"copy-webpack-plugin": "^11.0.0",
 		"css-loader": "^6.7.3",
 		"css-minimizer-webpack-plugin": "^4.2.2",
