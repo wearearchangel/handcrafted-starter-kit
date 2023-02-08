@@ -31,7 +31,6 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "npm run clean && webpack",
 		"start:dev": "npm run clean && webpack serve --mode=development",
-		"stage": "npm run clean && webpack --mode=production",
 		"deploy": "npm run clean && webpack --mode=production"
 	},
 	"browserslist": {

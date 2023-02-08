@@ -96,17 +96,6 @@ const config = {
     optimization: {},
     plugins: plugins.concat([])
   },
-  staging: {
-    mode: 'production',
-    devtool: 'source-map',
-    devServer,
-    optimization: {
-      minimize: true,
-      minimizer: [new TerserPlugin({})],
-      usedExports: true
-    },
-    plugins: plugins.concat([])
-  },
   production: {
     mode: 'production',
     optimization: {
