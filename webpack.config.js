@@ -24,7 +24,7 @@ const plugins = [
     }
   }),
   new MiniCssExtractPlugin({
-    filename: 'styles/[name].css',
+    filename: 'styles/[name].[contenthash].css',
     chunkFilename: 'styles/[id].css'
   }),
   new HtmlWebpackPlugin({
@@ -44,12 +44,12 @@ const configDefault = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
-        generator: { filename: 'fonts/[name][ext]' }
+        generator: { filename: 'fonts/[name].[contenthash].[ext]' }
       },
       {
         test: /\.(png|svg|jpe?g|webp|gif|ico)$/i,
         type: 'asset/resource',
-        generator: { filename: 'assets/[name][ext]' }
+        generator: { filename: 'images/[name].[contenthash].[ext]' }
       },
       {
         test: /\.(sa|sc|c)ss$/i,
@@ -72,7 +72,7 @@ const configDefault = {
     ]
   },
   output: {
-    filename: 'scripts/[name].js',
+    filename: 'scripts/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist')
   },
   target: 'web'
