@@ -1,48 +1,50 @@
 {
-	"name": "handcrafted-starter-kit",
-	"version": "1.2.0",
-	"private": true,
-	"dependencies": {
-		"@wearearchangel/handcrafted": "^1.0.0-beta-rc-8.1"
-	},
-	"devDependencies": {
-		"rimraf": "^4.1.2",
-		"html-webpack-plugin": "^5.5.0",
-		"copy-webpack-plugin": "^11.0.0",
-		"css-loader": "^6.7.3",
-		"css-minimizer-webpack-plugin": "^4.2.2",
-		"eslint": "^8.33.0",
-		"eslint-config-standard": "^17.0.0",
-		"eslint-plugin-import": "^2.27.5",
-		"eslint-plugin-n": "^15.6.1",
-		"eslint-plugin-promise": "^6.1.1",
-		"mini-css-extract-plugin": "^2.7.2",
-		"sass": "^1.56.1",
-		"sass-loader": "^13.2.0",
-		"style-loader": "^3.3.1",
-		"terser-webpack-plugin": "^5.3.6",
-		"webpack": "^5.75.0",
-		"webpack-cli": "^4.10.0",
-		"webpack-dev-server": "^4.11.1",
-		"workbox-webpack-plugin": "^6.5.4"
-	},
-	"scripts": {
-		"clean": "rimraf dist",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "npm run clean && webpack",
-		"start:dev": "npm run clean && webpack serve --mode=development",
-		"deploy": "npm run clean && webpack --mode=production"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	}
+  "name": "handcrafted-starter-kit",
+  "version": "1.2.0",
+  "private": true,
+  "dependencies": {
+    "@wearearchangel/handcrafted": "^1.0.0-beta-rc-8.1"
+  },
+  "devDependencies": {
+    "rimraf": "^4.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "eslint": "^8.49.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-import": "^2.28.1",
+    "mini-css-extract-plugin": "^2.7.2",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.6",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "workbox-webpack-plugin": "^6.5.4"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && webpack",
+    "start:dev": "npm run clean && webpack serve --mode=development",
+    "deploy": "npm run clean && webpack --mode=production",
+    "release:major": "npm version major",
+    "release:minor": "npm version minor",
+    "release:patch": "npm version patch"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

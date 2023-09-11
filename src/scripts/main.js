@@ -1,8 +1,8 @@
-import { Router } from '@wearearchangel/handcrafted'
+import { Router } from "@wearearchangel/handcrafted";
 
 Router({
   home: {
-    path: '/',
-    template: 'Hello World'
+    path: "/",
+    template: "Hello World"
   }
-})
+});
