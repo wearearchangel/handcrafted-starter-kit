@@ -1,29 +1,8 @@
-@font-face {
-	font-family: 'Hubot Sans';
-	src:
-			url('../fonts/hubot-sans.woff2') format('woff2 supports variations'),
-			url('../fonts/hubot-sans.woff2') format('woff2-variations');
-	font-weight: 200 900;
-	font-stretch: 75% 125%;
-}
-
-:root {
-	--font-family: 'Hubot Sans', sans-serif;
-	--font-variant-1: 34px/1.3 var(--font-family);
-	--font-variant-2: 27px/1.3 var(--font-family);
-	--font-variant-3: 21px/1.3 var(--font-family);
-	--font-variant-4: 17px/1.5 var(--font-family);
-	--font-variant-5: 13px/1.5 var(--font-family);
-	--font-variant-6: 12px/1.5 var(--font-family);
-	--grid: 24px;
-	--theme-color: #222;
-	--theme-background: #FFF;
-}
-
 /*
  CSS architecture: https://itcss.io
  CSS code methodology: https://en.bem.info/
  */
+@import "settings";
 @import "tools";
 @import "generic";
 @import "base";
