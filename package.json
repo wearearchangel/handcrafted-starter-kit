@@ -1,6 +1,6 @@
 {
   "name": "handcrafted-starter-kit",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "private": true,
   "dependencies": {
     "@wearearchangel/handcrafted": "1.0.0-beta-rc-10.2"
