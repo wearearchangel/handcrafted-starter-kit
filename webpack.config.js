@@ -112,7 +112,6 @@ const configDefault = {
     path: staticPath,
     publicPath: PUBLIC_PATH
   },
-  watch: devMode && (watch || serve)
   target: "browserslist"
 };
 
