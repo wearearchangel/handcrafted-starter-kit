@@ -20,11 +20,12 @@ const plugins = [
   // }),
   new CopyPlugin({
     patterns: [
-      ".htaccess",
-      "manifest/**/*",
-      "favicon.ico",
-      "manifest.json",
-      "robots.txt"
+      {
+        from: "../public",
+        globOptions: {
+          ignore: ["**/*.html"]
+        }
+      }
     ],
     options: {
       concurrency: 100

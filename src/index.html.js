@@ -8,19 +8,19 @@ const Index = `
     <!DOCTYPE html>
     <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8"/>
 
         <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-        <meta content="text/html; charset=UTF-8" http-equiv="Content-type">
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-type"/>
 
         <meta content="no" name="msapplication-tap-highlight"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta content="${description}" name="description"/>
         <meta content="${keywords}" name="keywords"/>
 
-        <link href="manifest.json" rel="manifest"/>
-        <link href="favicon.ico" rel="shortcut icon"/>
-        <link as="font" crossorigin href="${font}" rel="preload" type="font/woff2">
+        <link href="/manifest.json" rel="manifest"/>
+        <link href="/favicon.ico" rel="shortcut icon"/>
+        <link href="${font}" as="font" crossorigin rel="preload" type="font/woff2"/>
 
         <title>${title}</title>
     </head>
