@@ -6,13 +6,9 @@ const WorkboxPlugin = require("workbox-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { WebpackPluginServe } = require("webpack-plugin-serve");
-
-const argv = require("webpack-nano/argv");
-const { serve, watch, nodeEnv } = argv;
 
 // Try the environment variable, otherwise use root
-const NODE_ENV = (nodeEnv || process.env.NODE_ENV);
+const NODE_ENV = process.env.NODE_ENV;
 const PUBLIC_PATH = process.env.PUBLIC_PATH || "/";
 
 const devMode = NODE_ENV === "development";
@@ -45,16 +41,6 @@ const plugins = [
   })
 ];
 
-const Serve = () => new WebpackPluginServe({
-  host: "localhost",
-  compress: true,
-  historyFallback: true,
-  liveReload: true,
-  publicPath: PUBLIC_PATH,
-  static: staticPath,
-  open: true
-});
-
 const Terser = () => new TerserPlugin({
   parallel: true,
   terserOptions: {
@@ -78,12 +64,7 @@ const entryPoints = [
 
 const configDefault = {
   context: path.join(__dirname, "src"),
-  entry: devMode && serve
-    ? [
-      "webpack-plugin-serve/client",
-      ...entryPoints
-    ]
-    : entryPoints,
+  entry: entryPoints,
   module: {
     rules: [
       {
@@ -123,7 +104,9 @@ const configDefault = {
   },
   output: {
     filename: `scripts/${devMode ? "[name]" : `[name]-[contenthash]`}.js`,
-    chunkFilename: `scripts/${devMode ? "[id]" : `[id]-[contenthash]`}.chunk.js`,
+    chunkFilename: `scripts/${devMode
+      ? "[id]"
+      : `[id]-[contenthash]`}.chunk.js`,
     path: staticPath,
     publicPath: PUBLIC_PATH
   },
@@ -135,7 +118,7 @@ const config = {
   development: {
     mode: "development",
     devtool: "cheap-module-source-map",
-    plugins: plugins.concat(devMode && serve ? [Serve()] : [])
+    plugins: plugins.concat([])
   },
   production: {
     mode: "production",
