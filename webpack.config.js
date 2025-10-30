@@ -13,6 +13,8 @@ const PUBLIC_PATH = process.env.PUBLIC_PATH || "/";
 
 const devMode = NODE_ENV === "development";
 const staticPath = path.resolve(__dirname, devMode ? ".cache" : "dist");
+const staticFilename = devMode ? "[name]" : "[name]-[contenthash]";
+const staticChunkFilename = `chunk-${devMode ? "[id]" : "[id]-[contenthash]"}`;
 
 const plugins = [
   // new webpack.DefinePlugin({
@@ -32,8 +34,8 @@ const plugins = [
     }
   }),
   new MiniCssExtractPlugin({
-    filename: "styles/[name].[contenthash].css",
-    chunkFilename: "styles/[id].css"
+    filename: `styles/${staticFilename}.css`,
+    chunkFilename: `styles/${staticChunkFilename}.css`
   }),
   new HtmlWebpackPlugin({
     compress: true,
@@ -71,15 +73,16 @@ const configDefault = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
-        generator: { filename: "fonts/[name].[contenthash].[ext]" }
+        generator: { filename: `fonts/${staticFilename}[ext]` }
       },
       {
         test: /\.(png|svg|jpe?g|webp|gif|ico)$/i,
         type: "asset/resource",
-        generator: { filename: "images/[name].[contenthash].[ext]" }
+        generator: { filename: `images/${staticFilename}[ext]` }
       },
       {
         test: /\.(sa|sc|c)ss$/i,
+        generator: { filename: `styles/${staticFilename}[ext]` },
         use: [
           process.env.NODE_ENV === "development"
             ? "style-loader"
@@ -104,10 +107,8 @@ const configDefault = {
     usedExports: devMode
   },
   output: {
-    filename: `scripts/${devMode ? "[name]" : `[name]-[contenthash]`}.js`,
-    chunkFilename: `scripts/${devMode
-      ? "[id]"
-      : `[id]-[contenthash]`}.chunk.js`,
+    filename: `scripts/${staticFilename}.js`,
+    chunkFilename: `scripts/${staticChunkFilename}.js`,
     path: staticPath,
     publicPath: PUBLIC_PATH
   },
